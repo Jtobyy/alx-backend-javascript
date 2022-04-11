@@ -7,3 +7,4 @@ const listPrinted = listOfStudents.map(
 );
 
 console.log(listPrinted)
+console.log(listOfStudents[0].holbertonClass)
