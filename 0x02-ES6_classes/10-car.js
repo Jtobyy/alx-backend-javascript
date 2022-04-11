@@ -6,6 +6,11 @@ export default class Car {
   }
 
   cloneCar() {
-    return new Car();
+    const Spicie = this.constructor[Symbol.species];
+    return new Spicie(this._brand, this._motor, this._color);
+  }
+
+  static get [Symbol.species]() {
+    return this;
   }
 }
