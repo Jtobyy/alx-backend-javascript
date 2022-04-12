@@ -1,7 +1,4 @@
 export default function cleanSet(set, startString) {
-  if (startString === '') {
-    return '';
-  }
   const myArray = [...set];
   let myString = '';
   const spliceLength = startString.length;
