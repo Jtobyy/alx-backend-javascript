@@ -11,5 +11,8 @@ export default function cleanSet(set, startString) {
   });
   const stringArray = [...myString];
   stringArray.pop();
+  while (stringArray[0] === '-') {
+    stringArray.shift();
+  }
   return stringArray.join('');
 }
