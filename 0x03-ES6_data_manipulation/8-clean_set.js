@@ -1,8 +1,10 @@
 export default function cleanSet(set, startString) {
-  const myArray = [...set];
+  if (startString === '') {
+    return '';
+  }
   let myString = '';
   const spliceLength = startString.length;
-  myArray.forEach((el) => {
+  set.forEach((el) => {
     if (el.startsWith(startString) === true) {
       myString += `${[...el].splice(spliceLength).join('')}-`;
     }
