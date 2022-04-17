@@ -52,6 +52,20 @@ function createEmployee(salary: number | string): Director | Teacher {
     }
 }
 
-console.log(createEmployee(200));
-console.log(createEmployee(1000));
-console.log(createEmployee('$500'));
+// Interesting, Creating functions specific to employees
+
+// Type predicate
+function isDirector(employee: Director | Teacher): employee is Director {
+  return (employee as Director).workDirectorTasks !== undefined;
+}
+
+function executeWork(employee: Director | Teacher) {
+  if (isDirector(employee)) {
+    console.log(employee.workDirectorTasks());
+    return(employee.workDirectorTasks());
+  }
+  else {
+    console.log(employee.workTeacherTasks());
+    return(employee.workTeacherTasks());
+  }
+}
