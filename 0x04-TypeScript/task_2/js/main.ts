@@ -69,3 +69,20 @@ function executeWork(employee: Director | Teacher) {
     return(employee.workTeacherTasks());
   }
 }
+
+// Task 7
+
+// String literal type
+type Subjects = 'Math' | 'History';
+
+function teachClass(todayClass: Subjects) {
+  if (todayClass === 'Math') {
+    return 'Teaching Math';
+  }
+  else {
+    return 'Teaching History';
+  }
+}
+
+console.log(teachClass('Math'));
+console.log(teachClass('History'));
