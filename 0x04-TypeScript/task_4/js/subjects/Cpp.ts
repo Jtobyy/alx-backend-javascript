@@ -1,19 +1,18 @@
-import Subjects from './Teacher';
+/// <reference path="Teacher.ts"/>
 
 namespace Subjects {
-  interface Teacher {
+  export interface Teacher {
     experienceTeachingC?: number,
   }
 
-  class Cpp extends Subject {
-    constructor() { super() }
+  export class Cpp extends Subject {
 
     getRequirements(): string {
       return 'Here is the list of requirements for Cpp';
     }
 
     getAvailableTeacher(): string {
-      if (''') {
+      if (this.teacher.experienceTeachingC <= 0) {
         return 'No available teacher';
       }
       return 'Available Teacher: <first name of teacher>';

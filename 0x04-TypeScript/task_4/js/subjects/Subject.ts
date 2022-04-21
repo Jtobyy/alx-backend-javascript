@@ -1,10 +1,8 @@
-import Subjects from './Teacher'
+/// <reference path="Teacher.ts"/>
 
 namespace Subjects {
-  class Subject {
-    constructor() {}
-
-    teacher implements Teacher;
+  export class Subject {
+    teacher: Teacher
 
     set setTeacher(teacher: Teacher) {
       this.teacher = teacher;
